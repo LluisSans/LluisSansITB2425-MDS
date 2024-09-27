@@ -6,7 +6,7 @@
 import datetime
 
 # Variables del any, mes i dia de neixament
-any = int(input("Any de neixament:"))
+any1 = int(input("Any de neixament:"))
 mes = int(input("Mes de neixament:"))
 dia = int(input("Dia de neixament:"))
 
@@ -14,7 +14,7 @@ dia = int(input("Dia de neixament:"))
 ara = datetime.datetime.now()
 
 # Determina si es major d'edad
-if any < ara.year - 18:
+if any1 < ara.year - 18:
     print("Ets major d'edat")
 elif mes < ara.month:
     print("Ets major d'edat")
