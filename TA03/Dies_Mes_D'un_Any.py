@@ -1,10 +1,15 @@
-import calendar
+#Demanar dades
+#Validar dades
+#Procesar dades
 
 any = int(input("Introdueix l'any: "))
 mes = int(input("Introdueix el mes (1-12): "))
 
-if 1 <= mes <= 12:
-    dies = calendar.monthrange(any, mes)[1]
-    print(f"El mes {mes} de l'any {any} té {dies} dies.")
+if mes >=1 and mes <=12:
+    print("OK")
+    if mes == 12 or mes == 10 or mes == 8 or mes == 7 or mes == 5 or mes == 3 or mes == 1:
+        print("31 dies")
+    elif mes == 11 or mes == 9 or mes == 6 or mes == 4:
+        print("30 dies")
 else:
-    print("Mes invàlid. Introdueix un valor entre 1 i 12.")
+    print("Error de numero del mes")
