@@ -1,5 +1,7 @@
 import xml.etree.ElementTree as ET
 from datetime import datetime
+import json  # Importar el mòdul json
+
 
 def leer_incidencias(fichero):
     # Cargar y parsear el archivo XML
@@ -43,6 +45,7 @@ def leer_incidencias(fichero):
 
     return noms_i_cognoms, correus_electronics, datas_de_la_incidencia, nivells_urgencia
 
+
 def mostrar_incidencias(noms, correus, datas, nivells):
     fecha_inicio = datetime(2024, 9, 1)  # 1 de septiembre de 2024
     fecha_hoy = datetime.now()  # Fecha actual
@@ -60,19 +63,35 @@ def mostrar_incidencias(noms, correus, datas, nivells):
     orden_urgencia = {'Molt Urgent': 1, 'Urgent': 2, 'Poc Urgent': 3}
 
     # Ordenar las incidencias primero por NIVELL_URGENCIA y luego por fecha
-    incidencias_validas.sort(key=lambda x: (orden_urgencia.get(x[3], 4), x[2]))  # Usar 4 para nivells no especificados
+    incidencias_validas.sort(key=lambda x: (orden_urgencia.get(x[3], 4), x[2]))
 
     # Mostrar la información ordenada
     print(
         f"{'NOM_I_COGNOMS':<20} \t {'CORREU_ELECTRONIC':<30} \t {'DATA_DE_LA_INCIDENCIA':<20} \t {'NIVELL_URGENCIA':<15}")
     print("-" * 108)
 
+    # Crear una lista de diccionaris per a guardar les dades
+    incidencias_json = []
+
     for nom, correu, fecha, nivell in incidencias_validas:
         fecha_str = fecha.strftime("%d/%m/%Y")
         print(f"{nom:<20} \t {correu:<30} \t {fecha_str:<20} \t {nivell:<15}")
 
+        # Afegir les incidències a la llista en format diccionari
+        incidencias_json.append({
+            "nom": nom,
+            "correu": correu,
+            "data": fecha_str,
+            "nivell": nivell
+        })
+
+    # Escriure les incidències al fitxer JSON
+    with open('incidencies.json', 'w') as json_file:
+        json.dump(incidencias_json, json_file, indent=4, ensure_ascii=False)
+
+
 if __name__ == "__main__":
-    fichero_xml = '/home/lluis.sans.7e6/PycharmProjects/LluisSansITB2425-MDS/TA03/incidencies.xml'
+    fichero_xml = '/home/lluis.sans.7e6/Baixades/incidencies.xml'
     try:
         noms, correus, datas, nivells = leer_incidencias(fichero_xml)
         if noms:  # Solo mostrar si hay datos
