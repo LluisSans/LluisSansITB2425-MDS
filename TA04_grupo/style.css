@@ -1,122 +1,107 @@
-/* Estilos generales */
-body {
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #e6e6e6; /* Fondo gris suave */
-    margin: 0;
-    padding: 0;
-    color: #333; /* Color de texto estándar */
-    display: flex; /* Usamos flexbox para facilitar la distribución */
-    flex-direction: column; /* Aseguramos que los elementos se apilen verticalmente */
-    height: 100vh; /* El body ocupa toda la altura de la ventana */
-    overflow: hidden; /* Evita que haya scroll no deseado */
+    background-color: #e6e6e6;
+    color: #333; 
+    display: flex;
+    flex-direction: column;
 }
 
-/* Aseguramos que html y body ocupen toda la altura de la ventana */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* Encabezado */
 header {
-    background-color: #4A90E2; /* Azul suave */
+    background: linear-gradient(45deg, #4A90E2, #50E3C2); 
     color: white;
     text-align: center;
-    padding: 40px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centra el texto dentro del encabezado */
-    flex-shrink: 0; /* Evita que el encabezado se reduzca */
-    height: 7%; 
+    align-items: center;
+    flex-shrink: 0; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 header h1 {
     margin: 0;
-    font-size: 3em; /* Título grande */
-    letter-spacing: 1px;
-    font-weight: 600;
+    font-size: 3.2em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
 
-/* Navegación */
 nav {
-    background-color: #fff; /* Fondo blanco */
+    background-color: #ffffff; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    height: 7%; /* La barra de navegación ocupa el 7% de la altura de la ventana */
-    flex-shrink: 0; /* Evita que la barra de navegación se reduzca */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1); 
+    height: 10vh; 
+    flex-shrink: 0;
 }
 
 nav h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #333;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
-/* Estilo de los botones */
 .nav-buttons button {
-    padding: 12px 24px;
-    background-color: #50E3C2; /* Verde suave */
-    color: #fff;
+    padding: 12px 30px;
+    background-color: #4A90E2; 
+    color: white;
     border: none;
     cursor: pointer;
-    border-radius: 30px;
-    font-size: 1.1em;
+    border-radius: 25px;
+    font-size: 1.2em;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 0 12px;
+    margin: 0 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .nav-buttons button:hover {
-    background-color: #34B69A; /* Cambio de color al pasar el mouse */
-    transform: translateY(-3px); /* Efecto sutil de elevación */
+    background-color: #50E3C2;
+    transform: translateY(-2px);
 }
 
-/* Sección principal (sobre mí y proyectos) */
+.nav-buttons button:active {
+    transform: translateY(1px);
+}
+
 main {
     display: flex;
-    justify-content: space-between; /* Alinea las secciones horizontalmente */
-    align-items: stretch; /* Asegura que las secciones ocupen toda la altura disponible */
-    flex: 1; /* Permite que main ocupe el espacio restante */
-    padding: 0;
-    margin: 0; /* Elimina márgenes innecesarios entre las secciones */
-    box-sizing: border-box; /* Incluye rellenos y bordes dentro del cálculo del tamaño total */
-    overflow: hidden; /* Evita scroll en la sección principal */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* Sobre mí y Proyectos */
 .about-me, .projects {
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Asegura que las secciones ocupen toda la altura disponible dentro de main */
-    box-sizing: border-box; /* Incluye relleno y borde en el cálculo del tamaño */
-    overflow-y: hidden; /* Permite scroll interno solo si es necesario */
+    height: 100%; 
+    box-sizing: border-box;
 }
 
-/* Aseguramos que la sección sobre mí no tenga scroll, sino que ocupe todo el espacio disponible */
 .about-me {
-    width: 70%;
-    display: flex;
-    flex-direction: column; /* Hace que los elementos dentro de .about-me se apilen verticalmente */
-    justify-content: space-between; /* Asegura que el contenido se distribuye de manera eficiente */
-    flex-grow: 1; /* Permite que la sección crezca para llenar el espacio disponible */
+    margin-right: 20px; 
 }
 
-/* Sección Proyectos */
+.about-me {
+    flex: 0 0 65%; 
+}
+
 .projects {
-    width: 30%;
-    display: flex;
-    flex-direction: column; /* Hace que los elementos dentro de .projects se apilen verticalmente */
-    justify-content: space-between; /* Asegura que el contenido se distribuye de manera eficiente */
-    flex-grow: 1; /* Permite que la sección crezca para llenar el espacio disponible */
+    flex: 0 0 35%; 
 }
 
-/* Estilo de la sección "Sobre mí" */
+.about-me, .projects {
+    font-family: 'Merriweather', serif; 
+}
+
 .about-me ul {
     margin: 20px 0;
     padding-left: 20px;
@@ -129,19 +114,18 @@ main {
     line-height: 1.8;
 }
 
-/* Estilo de la sección "Proyectos" */
 .projects h3 {
     color: #333;
-    font-size: 1.8em;
+    font-size: 1.7em;
     margin-bottom: 20px;
 }
 
 .project-item {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .project-item a {
-    color: #4A90E2; /* Azul para los enlaces */
+    color: #4A90E2;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: 600;
@@ -149,19 +133,34 @@ main {
 
 .project-item a:hover {
     text-decoration: underline;
-    color: #50E3C2; /* Verde en hover */
+    color: #50E3C2;
 }
 
-/* Pie de página */
+footer a:hover {
+    text-decoration: underline;
+}
+
+article {
+    font-size: 0.9em; 
+    line-height: 1.6; 
+    text-align: justify;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.about-me, .projects {
+    font-family: 'Merriweather', serif;
+}
+
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 25px 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    flex-shrink: 0;
+    background-color: #3a3a3a;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
 footer a {
@@ -169,6 +168,38 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #04AA6D;
+}
+footer p {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #04AA6D;
 }
