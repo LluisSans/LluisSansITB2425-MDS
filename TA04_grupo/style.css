@@ -1,0 +1,174 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #e6e6e6; /* Fondo gris suave */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Color de texto estándar */
+    display: flex; /* Usamos flexbox para facilitar la distribución */
+    flex-direction: column; /* Aseguramos que los elementos se apilen verticalmente */
+    height: 100vh; /* El body ocupa toda la altura de la ventana */
+    overflow: hidden; /* Evita que haya scroll no deseado */
+}
+
+/* Aseguramos que html y body ocupen toda la altura de la ventana */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #4A90E2; /* Azul suave */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el texto dentro del encabezado */
+    flex-shrink: 0; /* Evita que el encabezado se reduzca */
+    height: 7%; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Título grande */
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Navegación */
+nav {
+    background-color: #fff; /* Fondo blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    height: 7%; /* La barra de navegación ocupa el 7% de la altura de la ventana */
+    flex-shrink: 0; /* Evita que la barra de navegación se reduzca */
+}
+
+nav h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-right: 40px;
+}
+
+/* Estilo de los botones */
+.nav-buttons button {
+    padding: 12px 24px;
+    background-color: #50E3C2; /* Verde suave */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 12px;
+}
+
+.nav-buttons button:hover {
+    background-color: #34B69A; /* Cambio de color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto sutil de elevación */
+}
+
+/* Sección principal (sobre mí y proyectos) */
+main {
+    display: flex;
+    justify-content: space-between; /* Alinea las secciones horizontalmente */
+    align-items: stretch; /* Asegura que las secciones ocupen toda la altura disponible */
+    flex: 1; /* Permite que main ocupe el espacio restante */
+    padding: 0;
+    margin: 0; /* Elimina márgenes innecesarios entre las secciones */
+    box-sizing: border-box; /* Incluye rellenos y bordes dentro del cálculo del tamaño total */
+    overflow: hidden; /* Evita scroll en la sección principal */
+}
+
+/* Sobre mí y Proyectos */
+.about-me, .projects {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Asegura que las secciones ocupen toda la altura disponible dentro de main */
+    box-sizing: border-box; /* Incluye relleno y borde en el cálculo del tamaño */
+    overflow-y: hidden; /* Permite scroll interno solo si es necesario */
+}
+
+/* Aseguramos que la sección sobre mí no tenga scroll, sino que ocupe todo el espacio disponible */
+.about-me {
+    width: 70%;
+    display: flex;
+    flex-direction: column; /* Hace que los elementos dentro de .about-me se apilen verticalmente */
+    justify-content: space-between; /* Asegura que el contenido se distribuye de manera eficiente */
+    flex-grow: 1; /* Permite que la sección crezca para llenar el espacio disponible */
+}
+
+/* Sección Proyectos */
+.projects {
+    width: 30%;
+    display: flex;
+    flex-direction: column; /* Hace que los elementos dentro de .projects se apilen verticalmente */
+    justify-content: space-between; /* Asegura que el contenido se distribuye de manera eficiente */
+    flex-grow: 1; /* Permite que la sección crezca para llenar el espacio disponible */
+}
+
+/* Estilo de la sección "Sobre mí" */
+.about-me ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.about-me p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Estilo de la sección "Proyectos" */
+.projects h3 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.project-item {
+    margin-bottom: 25px;
+}
+
+.project-item a {
+    color: #4A90E2; /* Azul para los enlaces */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+    color: #50E3C2; /* Verde en hover */
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
