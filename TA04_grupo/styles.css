@@ -1,0 +1,237 @@
+/* Estilos globales */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #e6e6e6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg, #4A90E2, #50E3C2);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1 i {
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+/* Navegación */
+nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    min-height: 60px; /* Asegura que no se reduzca la altura */
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-buttons button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #4A90E2;
+    border: 2px solid #4A90E2;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    flex: 1;
+}
+
+.nav-buttons button:hover {
+    background-color: #4A90E2;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+/* Section y Aside en Main */
+.about-me, .projects {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 94%; /* Asegura que ambos elementos usen toda la altura disponible */
+    flex-grow: 1;
+    overflow: hidden;
+    font-family: 'Merriweather', serif; 
+}
+
+.about-me {
+    flex-basis: 60%;
+}
+
+.about-me h1, p {
+    padding-bottom: 10px;;
+}
+
+.projects {
+    flex-basis: 35%;
+}
+
+.projects h3 {
+    font-size: 1.3em;
+}
+
+.project-item a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+    color: #50E3C2;
+}
+
+/* Ajuste del texto */
+.about-me p, .projects p {
+    font-size: em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.formato_texto {
+    text-align: justify;
+    margin-left: 33px;
+    margin-right: 33px;
+}
+
+/* Footer */
+footer {
+    background-color: #3a3a3a;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links, .footer-socials {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-socials a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #04AA6D;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #04AA6D;
+}
+
+/* Media Queries */
+
+/* Para tabletas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .nav-buttons button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me, .projects {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+/* Para teléfonos móviles */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .nav-buttons button {
+        font-size: 0.8em;
+        padding: 6px 10px;
+        margin: 5px;
+    }
+
+    .about-me, .projects {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links, .footer-socials {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

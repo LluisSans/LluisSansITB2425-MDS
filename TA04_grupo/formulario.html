@@ -4,7 +4,7 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>TA04</title>
-       <link rel="stylesheet" href="style.css"> <!-- archivo CSS externo -->
+       <link rel="stylesheet" href="styles.css"> 
        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -28,24 +28,27 @@
        </nav>
      
        <main>
-           <section class="about-me"> 
-            <h1>Proyecto 1</h1>
-            <article>
-                <h3 id="sobre_nosotros">Sobre Nosotros</h3>
-                <p></p>
-                <h3>Objetivos Como Grupo</h3>
-                <p>Somos un grupo con el interés de desarrollar una página web desde 0, y solo con la ayuda necesaria de inteligencia artifical. Además, queremos crear una página web que no solo tenga información y proyectos, sino que también sea visualmente estética para el agrado del usuario (User Experience)</p>
-                <h3>Objetivos del Proyecto</h3>
-                <p>El desarrollamiento de esta página web es para un trabajo de la asignatura de "Llenguatge de Marques, Sostenibilitat i Digitalització", la cual en esta tarea tiene la finalidad de poner nuestros conocimientos a prueba sobre HTML, CSS i JavaScript. Deberemos de crear una web que destaque especialmente dos de nuestros proyectos en la página principa, crear un índice con otros trabajos/proyectos y un formulario de contacto.</p>
-           </section>
-  
+        <section>
+            <form method="POST">
+                <label for="name">Nombre y Apellidos</label><br>
+                <input type="text" id="name" name="name" required><br>
+            
+                <label for="tel">Teléfono</label><br>
+                <input type="tel" id="tel" name="tel" pattern="[0-9]{9}" required><br>
+            
+                <label for="mail">Correo Electrónico</label><br>
+                <input type="email" id="mail" name="mail" required><br><br>
+            
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
        </main>
 
        <footer>
-        <p>© 2024 Grupo 2: Alejandro Arbós, Linyi Zhang, Lluís Sans</p>
+        <p>© 2024 Grupo 2: Alejandro Arbós, Linyi Zhang, Lluis Sans</p>
         <div class="footer-links">
-            <a href="#">Política de privacidad</a>
-            <a href="#">Términos de servicio</a>
+            <a href="politica.html">Política de privacidad</a>
+            <a href="terminos.html">Términos de servicio</a>
         </div>
         <div class="footer-socials">
             <a href="#"><i class="fab fa-facebook"></i></a>
