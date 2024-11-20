@@ -4,7 +4,7 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>TA04</title>
-       <link rel="stylesheet" href="styles.css"> 
+       <link rel="stylesheet" href="style_formulario.css"> 
        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -13,9 +13,9 @@
    <body>
        <header>
         <h1><i class="fas fa-globe"></i> PRESENTACIÓN</h1>
-    </header>
+        </header>
   
-       <nav>
+        <nav>
            <div class="nav-buttons">
             <a href="index.html">
                 <button>Home</button></a>
@@ -25,36 +25,44 @@
                 <button>Formulario</button>
             </a>
            </div>
-       </nav>
+        </nav>
      
-       <main>
-        <section>
-            <form method="POST">
-                <label for="name">Nombre y Apellidos</label><br>
-                <input type="text" id="name" name="name" required><br>
-            
-                <label for="tel">Teléfono</label><br>
-                <input type="tel" id="tel" name="tel" pattern="[0-9]{9}" required><br>
-            
-                <label for="mail">Correo Electrónico</label><br>
-                <input type="email" id="mail" name="mail" required><br><br>
-            
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
-       </main>
-
-       <footer>
-        <p>© 2024 Grupo 2: Alejandro Arbós, Linyi Zhang, Lluis Sans</p>
-        <div class="footer-links">
-            <a href="politica.html">Política de privacidad</a>
-            <a href="terminos.html">Términos de servicio</a>
-        </div>
-        <div class="footer-socials">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>        
-    </footer>
-   </body>
+        <main>
+            <section class="about">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos un equipo de profesionales dedicados a la creación de soluciones digitales innovadoras. Nuestro objetivo es proporcionar servicios de alta calidad que satisfagan las necesidades de nuestros clientes.</p>
+            </section>
+     
+            <section class="form-section">
+                <h2>Formulario de Contacto</h2>
+                <form method="POST">
+                    <label for="name">Nombre y Apellidos</label><br>
+                    <input type="text" id="name" name="name" required><br>
+     
+                    <label for="tel">Teléfono</label><br>
+                    <input type="tel" id="tel" name="tel" pattern="[0-9]{9}" required><br>
+     
+                    <label for="mail">Correo Electrónico</label><br>
+                    <input type="email" id="mail" name="mail" required><br><br>
+     
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+        </main>
+     
+        <footer>
+            <p>© 2024 Grupo 2: Alejandro Arbós, Linyi Zhang, Lluis Sans</p>
+            <div class="footer-links">
+                <a href="formulario.html">Política de privacidad</a>
+                <a href="formulario.html">Términos de servicio</a>
+                <a href="formulario.html">Contáctanos</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </body>
 </html>
