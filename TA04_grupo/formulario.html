@@ -4,9 +4,9 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>TA04</title>
-       <link rel="stylesheet" href="style_formulario.css"> 
+       <link rel="stylesheet" href="css/style_formulario.css"> 
+       <script src="scripts/script_formulario"></script>
        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    </head>
 
@@ -28,14 +28,10 @@
         </nav>
      
         <main>
-            <section class="about">
-                <h2>Sobre Nosotros</h2>
-                <p>Somos un equipo de profesionales dedicados a la creación de soluciones digitales innovadoras. Nuestro objetivo es proporcionar servicios de alta calidad que satisfagan las necesidades de nuestros clientes.</p>
-            </section>
-     
             <section class="form-section">
                 <h2>Formulario de Contacto</h2>
-                <form method="POST">
+                <!-- Aquí se cambia el método del formulario y se agrega el onsubmit -->
+                <form method="post" onsubmit="validarFormulario(event)">
                     <label for="name">Nombre y Apellidos</label><br>
                     <input type="text" id="name" name="name" required><br>
      
@@ -43,26 +39,28 @@
                     <input type="tel" id="tel" name="tel" pattern="[0-9]{9}" required><br>
      
                     <label for="mail">Correo Electrónico</label><br>
-                    <input type="email" id="mail" name="mail" required><br><br>
+                    <input type="email" id="mail" name="mail" required><br>
+                    <span id="errorCorreo" style="color: red;"></span><br>
+
+                    <textarea name="message" style="width: 590px; height: 100px;">Deja tu mensaje</textarea>
      
                     <input type="submit" value="Enviar">
                 </form>
+                
             </section>
         </main>
      
         <footer>
             <p>© 2024 Grupo 2: Alejandro Arbós, Linyi Zhang, Lluis Sans</p>
             <div class="footer-links">
-                <a href="formulario.html">Política de privacidad</a>
-                <a href="formulario.html">Términos de servicio</a>
-                <a href="formulario.html">Contáctanos</a>
+                <a href="politica.html">Política de privacidad</a>
+                <a href="terminos.html">Términos de servicio</a>
             </div>
             <div class="footer-socials">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
+            </div>        
         </footer>
-    </body>
+     </body>
 </html>

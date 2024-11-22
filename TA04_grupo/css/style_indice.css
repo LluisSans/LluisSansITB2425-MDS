@@ -48,7 +48,7 @@ nav {
     align-items: center;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     height: 60px;
-    min-height: 60px;
+    min-height: 60px; /* Asegura que no se reduzca la altura */
     padding: 0 10px;
     position: sticky;
     top: 0;
@@ -65,17 +65,12 @@ nav {
     transition: all 0.3s ease;
     margin: 0 5px;
     flex: 1;
-    cursor: pointer;
 }
 
 .nav-buttons button:hover {
     background-color: #4A90E2;
     color: white;
-    transform: translateY(-2px) scale(1.05); /* Aumenta el tamaño al pasar el ratón */
-}
-
-.nav-buttons button:active {
-    transform: translateY(1px); /* Efecto de botón presionado */
+    transform: translateY(-2px);
 }
 
 /* Main */
@@ -85,102 +80,107 @@ main {
     padding: 20px;
     box-sizing: border-box;
     gap: 20px;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* Sección de "Sobre nosotros" */
-.about, .form-section {
+/* Section y Aside en Main */
+.about-me {
+    background-color: white;
     padding: 20px;
-    margin: 20px 0;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 94%; /* Asegura que ambos elementos usen toda la altura disponible */
+    flex-grow: 1;
+    overflow: hidden;
+    font-family: 'Merriweather', serif; 
 }
 
-.about h2, .form-section h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #333;
+.about-me {
+    flex-basis: 60%;
 }
 
-.about p {
-    font-size: 1.1em;
+.about-me h1, p {
+    padding-bottom: 10px;;
+    text-align: center;
+}
+
+
+/* Ajuste del texto */
+.about-me p {
+    font-size: em;
     color: #555;
+    margin-bottom: 20px;
     line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    
 }
 
-/* Formularios */
-form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
+.about-me a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-size:17px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+.about-me a:hover {
+    text-decoration: underline;
+    color: #50E3C2;
 }
 
-input[type="text"], input[type="tel"], input[type="email"] {
-    width: 96%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-    transition: border 0.3s ease;
+.formato_texto {
+    text-align: left;
+    margin-left: 33px;
+    margin-right: 33px;
 }
 
-input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
-    border-color: #4A90E2;
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4A90E2;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #50E3C2;
+.formato_texto a {
+    color: #4A90E2;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #3a3a3a;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
 }
 
-footer .footer-links a, .footer-socials a {
-    font-size: 1.1em;
-    margin: 0 15px;
+footer a {
+    color: white;
     text-decoration: none;
-    color: white;
 }
 
-footer .footer-links a:hover, footer .footer-socials a:hover {
-    color: #50E3C2;
-}
-
-/* Enlaces del pie de página */
 .footer-links, .footer-socials {
     display: flex;
-    justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
 }
 
 .footer-socials a {
-    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
     transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #04AA6D;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #04AA6D;
 }
 
 /* Media Queries */
@@ -201,7 +201,7 @@ footer .footer-links a:hover, footer .footer-socials a:hover {
         align-items: center;
     }
 
-    .about, .form-section {
+    .about-me, .projects {
         width: 90%;
         margin: 10px 0;
     }
@@ -219,7 +219,7 @@ footer .footer-links a:hover, footer .footer-socials a:hover {
         margin: 5px;
     }
 
-    .about, .form-section {
+    .about-me, .projects {
         padding: 15px;
         font-size: 0.9em;
     }
