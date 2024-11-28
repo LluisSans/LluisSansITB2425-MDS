@@ -76,34 +76,12 @@ nav {
 /* Main */
 main {
     flex-grow: 1;
-    padding: 20px;
     box-sizing: border-box;
 }
 
-/* Section y Aside en Main */
-.about-me {
-    background-color: #131144;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 94%; /* Asegura que ambos elementos usen toda la altura disponible */
-    flex-grow: 1;
-    font-family: 'Merriweather', serif; 
-    text-align: center;
-    color: white;
-}
-h1 {
-    font-size: 50px;
-    margin: auto;
-}
-
-aside {
-    text-align: justify;
-    margin-left: 20px;
-}
-a {
-    color: white;
-    text-decoration: none;
+h2 {
+    font-size: 1.3em;
+    margin: 1%;
 }
 
 /* Footer */
