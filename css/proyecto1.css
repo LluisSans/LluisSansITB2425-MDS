@@ -83,6 +83,16 @@ h2 {
     font-size: 1.3em;
     margin: 1%;
 }
+/* Alinear Imagen */
+.centrar-imagen {
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Asegúrate de que la imagen se comporte como un bloque */
+img {
+    display: block; /* Evita el espacio debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+}
 
 /* Footer */
 footer {
