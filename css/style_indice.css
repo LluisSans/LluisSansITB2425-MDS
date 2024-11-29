@@ -94,6 +94,12 @@ main {
     font-family: 'Merriweather', serif; 
 }
 
+img {
+    width: 50%;
+    margin-left: 25%;
+    
+}
+
 .about-me {
     flex-basis: 60%;
 }
